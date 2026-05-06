@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.26.2] - 2026-05-05
+
+### Added
+- **SRE Action Safety**: `k8s_blast_radius` tool — pre-flight simulator for destructive operations (drain, cordon, delete, scale). Returns a `safe`/`risky`/`unsafe` verdict with structured reasons and details, **without executing the action**.
+- **Multi-Action Analysis**: drain (last-replica detection, stateful flags, orphan pod warnings); cordon (capacity assessment); delete (PDB coverage, dependent Services, singleton risk, LoadBalancer external-IP impact); scale (PDB minAvailable violations, scale-to-zero unsafe flagging, scale-up capacity notes).
+- **Security**: `k8s_blast_radius` registered in `READ_ONLY_TOOLS` — read-only by design (analyzes only, never executes).
+- **Testing**: 36-test unit suite covering verdict escalation, owner-reference walking, label-selector matching, and the four action-specific decision paths.
+- **Doc Sync**: Updated README tool count from stale 264 to 267 (catches drift since 0.24.0 plus this release).
+
+
 ## [0.26.1] - 2026-05-06
 
 ### Added

@@ -750,7 +750,7 @@ To integrate this server, add the configuration below to your `claude_desktop_co
 
 ## Tool Reference
 
-For a complete list of all 262 tools and their kubectl equivalents, see **[TOOLS_REFERENCE.md](TOOLS_REFERENCE.md)**.
+For a complete list of all 265 tools and their kubectl equivalents, see **[TOOLS_REFERENCE.md](TOOLS_REFERENCE.md)**.
 
 ### Tool Categories
 
@@ -768,8 +768,9 @@ For a complete list of all 262 tools and their kubectl equivalents, see **[TOOLS
 | **Advanced** | 20 | Bulk ops, analysis, optimization, wait, proxy |
 | **Templates** | 4 | Resource templates |
 | **WebSocket** | 4 | Exec, attach, port-forward, logs |
+| **SRE TOOLS** | 3 | Incident snapshot, Change since , Blast radius |
 
-**Total: 264 tools**
+**Total: 265 tools**
 
 ### Infrastructure Protection
 
