@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png" width="300" alt="k8s-helm-mcp v0.26.2 logo">
+  <img src="assets/logo.png" width="300" alt="k8s-helm-mcp v0.27.0 logo">
 </p>
 
 # k8s-helm-mcp
@@ -750,7 +750,7 @@ To integrate this server, add the configuration below to your `claude_desktop_co
 
 ## Tool Reference
 
-For a complete list of all 267 tools and their kubectl equivalents, see **[TOOLS_REFERENCE.md](TOOLS_REFERENCE.md)**.
+For a complete list of all 268 tools and their kubectl equivalents, see **[TOOLS_REFERENCE.md](TOOLS_REFERENCE.md)**.
 
 ### Tool Categories
 
@@ -770,7 +770,7 @@ For a complete list of all 267 tools and their kubectl equivalents, see **[TOOLS
 | **WebSocket** | 4 | Exec, attach, port-forward, logs |
 | **SRE TOOLS** | 3 | Incident snapshot, Change since , Blast radius |
 
-**Total: 267 tools**
+**Total: 268 tools**
 
 ### Infrastructure Protection
 
