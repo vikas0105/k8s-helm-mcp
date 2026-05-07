@@ -20,6 +20,7 @@ import { registerIncidentSnapshotTools } from "./k8s-tools/incident-snapshot.js"
 import { registerChangesSinceTools } from "./k8s-tools/changes-since.js";
 import { registerAdvancedTools } from "./k8s-tools/advanced.js";
 import { registerBlastRadiusTools } from "./k8s-tools/blast-radius.js";
+import { registerWorkloadDiffTools } from "./k8s-tools/workload-diff.js";
 import { registerTemplateTools } from "./k8s-tools/templates.js";
 import { registerWebSocketTools } from "./k8s-tools/websocket.js";
 import { registerHelmReleaseListTools } from "./helm-tools/release-list.js";
@@ -206,6 +207,7 @@ class K8sMcpServer {
       this.registerTools(registerChangesSinceTools(this.k8sClient));
       this.registerTools(registerAdvancedTools(this.k8sClient, this.cacheManager));
       this.registerTools(registerBlastRadiusTools(this.k8sClient));
+      this.registerTools(registerWorkloadDiffTools(this.k8sClient));
       this.registerTools(registerTemplateTools(this.k8sClient));
       this.registerTools(registerWebSocketTools(this.k8sClient));
       this.registerTools(registerHelmReleaseListTools(this.k8sClient));

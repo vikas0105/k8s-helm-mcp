@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.27.0] - 2026-05-07
+
+### Added
+- **SRE Drift Detection**: `k8s_workload_diff` tool — compares two workloads (Deployment, StatefulSet, or DaemonSet) and returns a categorized structured diff. Use to answer "how is staging different from prod?" or "what changed between blue and green?".
+- **Severity Categorization**: critical (image mismatch, container count drift), warning (resource drift, replica drift, scheduling drift, PDB gap, HPA settings), info (label/annotation/env-var differences).
+- **Diff Coverage**: image tags, replicas, CPU/memory requests and limits, environment variables, ConfigMap/Secret references, NodeSelector, tolerations, ServiceAccount, PriorityClass, labels, annotations, HPA min/max replicas, PDB coverage and minAvailable.
+- **Smart Container Matching**: matches containers by name when possible, falls back to position. Reordered containers with same names produce no false-positive diffs.
+- **Configurable Ignores**: `ignoreLabels`, `ignoreAnnotations`, `ignoreEnvVars` parameters for filtering intentional differences (e.g., `env=staging` vs `env=prod`).
+- **Security**: `k8s_workload_diff` registered in `READ_ONLY_TOOLS` — read-only by design.
+- **Testing**: 41-test unit suite covering replica diff, container alignment, env-var matching, ConfigMap/Secret refs, scheduling diff, label/annotation diff, severity rollup.
+
+
 ## [0.26.2] - 2026-05-06
 
 ### Added

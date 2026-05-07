@@ -945,7 +945,7 @@ All tools starting with `k8s_delete_`, `k8s_bulk_delete_`, `k8s_helm_uninstall`,
 
 ---
 
-*Generated for k8s-helm-mcp v0.26.2*
+*Generated for k8s-helm-mcp v0.27.0*
 
 ---
 
